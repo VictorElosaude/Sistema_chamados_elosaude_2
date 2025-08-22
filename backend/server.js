@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 
 app.use(cors());
@@ -147,6 +147,3 @@ app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
