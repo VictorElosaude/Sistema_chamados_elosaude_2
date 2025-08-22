@@ -24,7 +24,7 @@ WORKDIR /app
 COPY backend/package*.json ./backend/
 COPY backend/server.js ./backend/
 COPY backend/data.json ./backend/
-COPY backend/database.js ./backend/ # Se existir
+#COPY backend/database.js ./backend/ # Se existir
 
 # Copia os arquivos de backend necessários (se houver)
 COPY backend ./backend
