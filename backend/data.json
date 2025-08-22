@@ -1,0 +1,40 @@
+{
+  "comunicados": [
+    {
+      "id": "a8bf30db",
+      "titulo": "Sistema de Suporte Técnico – A Revolução do Atendimento",
+      "descricao": "Chega de perder tempo e energia! Criamos uma solução que transforma o caos em clareza, colocando o usuário no centro e garantindo que cada problema vire uma oportunidade de brilhar.",
+      "data": "2025-08-22",
+      "beneficioPrincipal": "Uma mudança que vai muito além da tecnologia: mais engajamento, mais produtividade e a certeza de que cada colaborador é ouvido e atendido com excelência.",
+      "impacto": {
+        "antes": "Desorganização, demora, frustração e nenhuma visibilidade.",
+        "agora": "Chamados claros, acompanhamento em tempo real e soluções rápidas que devolvem tempo e tranquilidade.",
+        "resultado": "Usuários satisfeitos, equipe valorizada e uma empresa que cresce porque sabe transformar problemas em soluções inteligentes."
+      },
+      "inovacaoEmMovimento": "Não entregamos apenas um sistema. Entregamos uma nova forma de trabalhar, pensar e servir. Uma inovação que não para — porque o futuro acontece em movimento.",
+      "tokenFeedback": "25082934",
+      "feedbacks": []
+    },
+    {
+      "id": "8ebb3d16",
+      "titulo": "Sistema de Suporte Técnico – A Revolução do Atendimento",
+      "descricao": "Chega de perder tempo e energia! Criamos uma solução que transforma o caos em clareza, colocando o usuário no centro e garantindo que cada problema vire uma oportunidade de brilhar.",
+      "data": "2025-08-22",
+      "beneficioPrincipal": "⚡ Agilidade, organização e confiança. O suporte que antes atrasava, agora acelera resultados.",
+      "impacto": {
+        "antes": "❌ Desorganização, demora, frustração e nenhuma visibilidade.",
+        "agora": "✅ Chamados claros, acompanhamento em tempo real e soluções rápidas que devolvem tempo e tranquilidade.",
+        "resultado": "🚀 Usuários satisfeitos, equipe valorizada e uma empresa que cresce porque sabe transformar problemas em soluções inteligentes.\n\nInovação em Movimento"
+      },
+      "inovacaoEmMovimento": "Não entregamos apenas um sistema. Entregamos uma nova forma de trabalhar, pensar e servir. Uma inovação que não para — porque o futuro acontece em movimento.",
+      "tokenFeedback": "4740dbb5",
+      "feedbacks": [
+        {
+          "nota": 2,
+          "comentario": "nnknkun",
+          "timestamp": "2025-08-22T02:24:50.259Z"
+        }
+      ]
+    }
+  ]
+}
