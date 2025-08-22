@@ -29,18 +29,17 @@ const writeData = (data) => {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
 };
 
+// --- ROTAS DA API ---
 // Rota para buscar todos os comunicados com métricas
 app.get('/api/comunicados', (req, res) => {
-  const { from_date, to_date } = req.query; // Pega os parâmetros de data da URL
+  const { from_date, to_date } = req.query;
   let dataFile = readData();
 
-  // Filtra os comunicados se os parâmetros de data existirem
   if (from_date && to_date) {
     const startDate = new Date(from_date);
     const endDate = new Date(to_date);
     
     dataFile.comunicados = dataFile.comunicados.filter(comunicado => {
-      // Ajusta o fuso horário para que a comparação seja correta
       const comunicadoDate = new Date(comunicado.data + 'T00:00:00'); 
       return comunicadoDate >= startDate && comunicadoDate <= endDate;
     });
@@ -50,7 +49,6 @@ app.get('/api/comunicados', (req, res) => {
     const totalNotas = comunicado.feedbacks.reduce((sum, f) => sum + f.nota, 0);
     const mediaSatisfacao = comunicado.feedbacks.length > 0 ? (totalNotas / comunicado.feedbacks.length).toFixed(1) : 0;
 
-    // Distribuição de notas
     const distribuicao = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
     comunicado.feedbacks.forEach(f => {
       distribuicao[f.nota]++;
@@ -101,7 +99,6 @@ app.post('/api/comunicado', (req, res) => {
   });
 });
 
-
 // Rota para salvar um novo feedback
 app.post('/api/feedback', (req, res) => {
   const { tokenFeedback, nota, comentario } = req.body;
@@ -143,7 +140,17 @@ app.get('/api/comunicado/:id', (req, res) => {
   res.status(200).json(comunicado);
 });
 
+// --- SERVINDO O FRONTEND (React) ---
+// Rota para servir os arquivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Rota "catch-all" para todas as outras rotas do frontend
+// IMPORTANTE: Esta rota deve ser a ÚLTIMA rota definida antes do 'app.listen'
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Inicia o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-
